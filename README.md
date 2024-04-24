@@ -36,3 +36,21 @@ conceptual idea for command line templating.
 this would allow no-plugin ripfmt to support generic tools.
 the template could be parsed and validated once at the beginning of the run and then used to spawn processes in parallel.
 the `--check` flag passed to ripgrep would inform error handling and exit code.
+
+# packaging
+
+thanks to the wonderful [cargo2nix](https://github.com/cargo2nix/cargo2nix) project `ripfmt` has a nix flake.
+
+stuff is fairly straightforward.
+on a suitable system (with nix and flakes and such) you can run `cargo2nix` to generate `Cargo.nix` from the `Cargo.toml` and `Cargo.lock` files.
+
+from the root of this project (where the Cargo.toml and Cargo.lock files are) you can build and run the latest `cargo2nix` generator like so:
+```
+nix run github:cargo2nix/cargo2nix
+```
+
+if/when cargo2nix needs to be updated the `nix flake update` family of commands will come into play.
+```
+nix flake lock --update-input cargo2nix
+```
+
