@@ -1,0 +1,16 @@
+[package]
+name = "ripfmt"
+description = "ripfmt recursively applies code formatting tools while respecting your gitignore"
+repository = "https://github.com/oclyke/ripfmt"
+readme = "README.md"
+keywords = ["parallel", "code", "format"]
+categories = ["development-tools"]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+globset = "0.4.14"
+ignore = "0.4.22"
