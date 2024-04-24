@@ -7,9 +7,11 @@ extremely early development.
 co-contibutors extremely welcome!
 
 **intent**
+
 ripfmt wants to be like [`ripgrep`](https://github.com/BurntSushi/ripgrep) - fast and focused.
 
 **scope**
+
 ripfmt does not actually format any code.
 this is a job that is better left to language-specific tools.
 
