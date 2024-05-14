@@ -43,6 +43,12 @@ the `--check` flag passed to ripgrep would inform error handling and exit code.
 
 thanks to the wonderful [cargo2nix](https://github.com/cargo2nix/cargo2nix) project `ripfmt` has a nix flake.
 
+supported systems may build ripfmt using nix.
+
+`nix build github:oclyke/ripfmt`: build remotely
+
+`git clone nix build .#ripfmt`: build from locally cloned repository
+
 stuff is fairly straightforward.
 on a suitable system (with nix and flakes and such) you can run `cargo2nix` to generate `Cargo.nix` from the `Cargo.toml` and `Cargo.lock` files.
 

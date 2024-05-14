@@ -9,7 +9,7 @@
   outputs = { self, nixpkgs, cargo2nix, ... }@inputs:
     let
       systems =
-        [ "x86_64-linux" "x86_64-darwin" "x86_64-windows" "aarch64-linux" ];
+        [ "x86_64-linux" "x86_64-darwin" "x86_64-windows" "aarch64-linux" "aarch64-darwin" ];
       lib = (import nixpkgs { system = "x86_64-linux"; }).lib;
     in {
       # Executed by `nix build .#<name>`
